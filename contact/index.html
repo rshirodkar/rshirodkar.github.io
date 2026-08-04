@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Rohan Shirodkar</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+  // Simple mailto-based submit: builds an email with the form contents and opens the user's mail client
+  function submitContact(e){
+    e.preventDefault();
+    const name = document.getElementById('f-name').value.trim();
+    const email = document.getElementById('f-email').value.trim();
+    const company = document.getElementById('f-company').value.trim();
+    const message = document.getElementById('f-message').value.trim();
+    if(!name || !email || !message){
+      alert('Please provide your name, email, and a short message.');
+      return;
+    }
+    const to = 'rohanshirodkar29@gmail.com';
+    const subject = encodeURIComponent('Website contact from ' + name);
+    const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + (company ? '\nCompany: ' + company : '') + '\n\nMessage:\n' + message);
+    const mailto = `mailto:${to}?subject=${subject}&body=${body}`;
+    window.location.href = mailto;
+  }
+  </script>
+</head>
+<body>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="logo" href="/">Rohan Shirodkar</a>
+      <div class="nav-links">
+        <a href="/blog/">Blog</a>
+        <a href="#projects">Projects</a>
+        <a href="/assets/resume.pdf" class="nav-resume" target="_blank" rel="noopener">Resume</a>
+        <a href="/contact/" class="contact-link">Contact</a>
+        <button id="theme-toggle" aria-label="Toggle theme" aria-pressed="false">🌓</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container contact-page" id="main">
+    <section>
+      <div class="section-header">
+        <h1>Contact</h1>
+        <p class="section-sub">Use the short intake form below — I'll get back to you on email.</p>
+      </div>
+
+      <form class="contact-form" onsubmit="submitContact(event)" aria-label="Contact form">
+        <label for="f-name">Name</label>
+        <input id="f-name" name="name" type="text" required />
+
+        <label for="f-email">Email</label>
+        <input id="f-email" name="email" type="email" required />
+
+        <label for="f-company">Company (optional)</label>
+        <input id="f-company" name="company" type="text" />
+
+        <label for="f-message">Message</label>
+        <textarea id="f-message" name="message" rows="6" required></textarea>
+
+        <div class="actions">
+          <button type="submit" class="button primary">Send</button>
+          <a class="button" href="mailto:rohanshirodkar29@gmail.com">Email directly</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Rohan Shirodkar — <a href="/assets/resume.pdf" target="_blank" rel="noopener">Resume</a></p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/theme.js" defer></script>
+</body>
+</html>
