@@ -4,48 +4,88 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Rohan Shirodkar — Home</title>
+  <title>Rohan Shirodkar — Software Engineer</title>
+  <meta name="description" content="Rohan Shirodkar — Product-focused software engineer building clean, responsive UIs. Explore projects, read articles, or download the resume.">
   <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="/assets/images/profile.svg" type="image/svg+xml">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Rohan Shirodkar — Software Engineer">
+  <meta property="og:description" content="Product-focused software engineer building clean, responsive UIs. Projects, blog, and resume.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Rohan Shirodkar","url":"https://rshirodkar.github.io/","sameAs":["https://github.com/rshirodkar"],"jobTitle":"Software Engineer"}
+  </script>
   <script src="/assets/js/theme.js" defer></script>
 </head>
 
 <body>
-  <nav class="nav">
+  <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
-      <a class="logo" href="/">Rohan</a>
+      <a class="logo" href="/">Rohan Shirodkar</a>
       <div class="nav-links">
         <a href="/blog/">Blog</a>
         <a href="#projects">Projects</a>
-        <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
+        <a href="/assets/resume.pdf" class="nav-resume" target="_blank" rel="noopener">Resume</a>
+        <a href="mailto:rohanshirodkar@example.com" class="contact-link">Contact</a>
+        <button id="theme-toggle" aria-label="Toggle theme" aria-pressed="false">🌓</button>
       </div>
     </div>
   </nav>
 
-  <main class="container">
+  <main class="container" id="main">
     <section class="hero">
-      <img src="/assets/images/profile.svg" alt="Profile" class="avatar">
-      <div class="hero-content">
-        <h1 class="name">Rohan Shirodkar</h1>
-        <p class="bio">Product-focused engineer building clean, responsive UIs. Add a short bio here describing what you do and what you're passionate about.</p>
-        <p class="actions">
-          <a class="button" href="/assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
-        </p>
+      <div class="hero-inner">
+        <img src="/assets/images/profile.jpg" alt="Rohan Shirodkar" class="avatar">
+        <div class="hero-content">
+          <h1 class="name">Rohan Shirodkar</h1>
+          <p class="tagline">Product-focused software engineer building clean, accessible, and responsive user interfaces.</p>
+          <p class="bio">I design and build web experiences with an emphasis on clarity, performance, and UX. Currently open to collaboration and opportunities.</p>
+          <div class="actions">
+            <a class="button primary" href="/assets/resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+            <a class="button" href="mailto:rohanshirodkar@example.com">Contact</a>
+          </div>
+          <div class="social">
+            <a class="social-link" href="https://github.com/rshirodkar" aria-label="GitHub" target="_blank" rel="noopener">GitHub</a>
+            <a class="social-link" href="https://linkedin.com/in/rshirodkar" aria-label="LinkedIn" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="projects" class="projects">
-      <h2>Projects</h2>
-      <ul class="project-list">
-        <li><a href="#">Project One — short description</a></li>
-        <li><a href="#">Project Two — short description</a></li>
-        <li><a href="#">Project Three — short description</a></li>
-      </ul>
+      <div class="section-header">
+        <h2>Featured Projects</h2>
+        <p class="section-sub">Selected work — concise descriptions and links to code or live demos.</p>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-media" aria-hidden="true"></div>
+          <h3><a href="#">Project One</a></h3>
+          <p class="project-desc">A short one-line summary of the project, its purpose, and the main tech used.</p>
+          <p class="project-meta"><span class="tag">React</span> <span class="tag">TypeScript</span> <a class="muted-link" href="#">Repo</a></p>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media" aria-hidden="true"></div>
+          <h3><a href="#">Project Two</a></h3>
+          <p class="project-desc">A short one-line summary of the project, its purpose, and the main tech used.</p>
+          <p class="project-meta"><span class="tag">Next.js</span> <span class="tag">Tailwind</span> <a class="muted-link" href="#">Demo</a></p>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media" aria-hidden="true"></div>
+          <h3><a href="#">Project Three</a></h3>
+          <p class="project-desc">A short one-line summary of the project, its purpose, and the main tech used.</p>
+          <p class="project-meta"><span class="tag">Node</span> <span class="tag">Express</span> <a class="muted-link" href="#">Repo</a></p>
+        </article>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2026 Rohan Shirodkar</p>
+    <div class="container footer-inner">
+      <p>&copy; 2026 Rohan Shirodkar — <a href="/assets/resume.pdf" target="_blank" rel="noopener">Resume</a></p>
     </div>
   </footer>
 </body>
