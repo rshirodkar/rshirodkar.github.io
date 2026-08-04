@@ -1,0 +1,49 @@
+/* Minimal responsive styles with light/dark variables */
+:root{
+  --bg: #ffffff;
+  --text: #0b0b0b;
+  --muted: #556270;
+  --accent: #0b6efd;
+  --card: #f7f7f8;
+}
+[data-theme="dark"]{
+  --bg: #0b0b0f;
+  --text: #e6e6e6;
+  --muted: #9aa0a6;
+  --accent: #58a6ff;
+  --card: #0f1115;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.container{max-width:900px;margin:80px auto;padding:0 20px}
+.nav{position:fixed;left:0;right:0;top:0;background:transparent;padding:12px 20px}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto}
+.nav a{color:var(--text);text-decoration:none;margin-right:16px}
+.nav .logo{font-weight:600}
+.nav-links{display:flex;align-items:center;gap:8px}
+#theme-toggle{background:transparent;border:1px solid var(--card);padding:6px 8px;border-radius:6px;cursor:pointer}
+.hero{display:flex;gap:24px;align-items:center;margin-top:36px}
+.avatar{width:120px;height:120px;border-radius:16px;flex:0 0 120px;background:var(--card);display:block}
+.hero-content{flex:1}
+.name{margin:0;font-size:1.6rem}
+.bio{color:var(--muted);margin-top:8px;line-height:1.45}
+.button{display:inline-block;margin-top:12px;padding:8px 12px;background:var(--accent);color:#fff;border-radius:8px;text-decoration:none}
+.projects{margin-top:40px}
+.project-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.project-list li{background:var(--card);padding:12px;border-radius:10px}
+.project-list a{color:var(--text);text-decoration:none;font-weight:500}
+.site-footer{border-top:1px solid rgba(0,0,0,0.06);margin-top:48px;padding:20px 0;color:var(--muted)}
+/* Responsive tweaks */
+@media (max-width:700px){
+  .hero{flex-direction:column;align-items:flex-start}
+  .avatar{width:96px;height:96px;border-radius:12px}
+  .container{margin-top:100px}
+}
