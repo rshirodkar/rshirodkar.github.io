@@ -69,6 +69,17 @@ body{
 /* Footer */
 .site-footer{border-top:1px solid rgba(0,0,0,0.06);margin-top:48px;padding:20px 0;color:var(--muted)}
 .footer-inner{display:flex;justify-content:space-between;align-items:center}
+
+/* Contact form */
+.contact-page .section-header h1{margin-bottom:6px}
+.contact-form{max-width:720px;margin-top:18px;background:var(--card);padding:20px;border-radius:12px;box-shadow:var(--shadow)}
+.contact-form label{display:block;margin-top:12px;font-weight:600;color:var(--muted)}
+.contact-form input,.contact-form textarea{width:100%;padding:10px;margin-top:6px;border:1px solid rgba(0,0,0,0.08);border-radius:8px;background:transparent;color:var(--text)}
+.contact-form .actions{display:flex;gap:12px;margin-top:16px}
+@media (max-width:900px){
+ .contact-form{padding:16px}
+}
+
 /* Accessibility and responsive */
 a:focus{outline:2px solid var(--accent);outline-offset:3px}
 @media (max-width:900px){
